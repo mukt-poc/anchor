@@ -10,21 +10,27 @@
     
     
  <script>
-     delete window.document.referrer;
-        window.document.__defineGetter__('referrer', function () {
-            return "https://www.irctc.co.in/nget/train-list";
-        });
-     delete window.document.origin;
-     window.document.__defineGetter__('origin', function () {
-            return "https://www.irctc.co.in/nget/train-list";
-        });
-     window.origin = "https://www.irctc.co.in/nget/train-list";
-window.anchor = true;
- 
+     document.getElementById('form-contact').submit(function (event) {
+    event.preventDefault();
+    grecaptcha.reset();
+    grecaptcha.execute();
+  });
+
+function formSubmit(response) {
+  // submit the form which now includes a g-recaptcha-response input
+}
   </script>
 </head>
 
 <body>
+	<form action="?">
+  <div class="g-recaptcha" 
+       data-sitekey="your-key"
+       data-size="invisible"
+       data-callback="formSubmit">
+  </div>
+  <button type="submit">Submit</button>
+</form>
 </body>
 
 </html>
