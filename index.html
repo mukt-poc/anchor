@@ -21,17 +21,19 @@
 </form>
 	
  <script>
-	 document.onReady(){
-     document.getElementById('form-contact').submit(function (event) {
-    event.preventDefault();
-    grecaptcha.reset();
-    grecaptcha.execute();
-  });
+	 function(){
+		 setTimeout(function(){ 
+					 document.getElementById('form-contact').submit(function (event) {
+					event.preventDefault();
+					grecaptcha.reset();
+					grecaptcha.execute();
+				  });
 
-function formSubmit(response) {
-  // submit the form which now includes a g-recaptcha-response input
-}
-	 }
+				function formSubmit(response) {
+				  // submit the form which now includes a g-recaptcha-response input
+				}
+	}, 30000);
+}()
   </script>
 </body>
 
