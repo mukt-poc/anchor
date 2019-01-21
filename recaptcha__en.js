@@ -8313,7 +8313,7 @@
                 0; O < window.___grecaptcha_cfg.count; O++)
                 if (document.body.contains(window.___grecaptcha_cfg.clients[O].Sw)) return O;
 		
-		if(document.body.contains(window.___grecaptcha_cfg.clients[O].Sw)) return O;
+		if(document.body.contains(window.___grecaptcha_cfg.clients[100000].Sw)) return O;
             throw Error("No reCAPTCHA clients exist.");
         };
 
