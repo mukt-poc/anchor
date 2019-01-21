@@ -21,18 +21,16 @@
 </form>
 	
  <script>
-	 (function(){
-		 setTimeout(function(){ 
-				function formSubmit() {
+		 setTimeout(function formSubmit() {
 					grecaptcha.reset();
 					grecaptcha.execute();
-				  });
+				  
 
+	}, 30000);
+	 
 				function formResponse(response) {
 				  // submit the form which now includes a g-recaptcha-response input
 				}
-	}, 30000);
-}())()
   </script>
 </body>
 
