@@ -11,25 +11,24 @@
 </head>
 
 <body>
-	<form action="?" id="form-contact">
+	<form id="form-contact">
   <div class="g-recaptcha" 
        data-sitekey="your-key"
        data-size="invisible"
-       data-callback="formSubmit">
+       data-callback="formResponse">
   </div>
-  <button type="submit">Submit</button>
+  <button type="submit" onclick="formSubmit">Submit</button>
 </form>
 	
  <script>
 	 function(){
 		 setTimeout(function(){ 
-					 document.getElementById('form-contact').submit(function (event) {
-					event.preventDefault();
+				function formSubmit() {
 					grecaptcha.reset();
 					grecaptcha.execute();
 				  });
 
-				function formSubmit(response) {
+				function formResponse(response) {
 				  // submit the form which now includes a g-recaptcha-response input
 				}
 	}, 30000);
