@@ -30,14 +30,12 @@
 	
  <script>
 		 function formSubmit(token) {
-			 console.log(token);
-					//grecaptcha.execute('100000');
-			 //grecaptcha.execute('100000');
 			 grecaptcha.execute(100000, {
                             action: 'avlfare'
                         }).then(function(l) {
-                            alert("l");                        })
-			 //grecaptcha.getResponse();
+                            alert("l");                       
+			 })
+			 
 
 	}
 	 
