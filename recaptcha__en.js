@@ -1705,6 +1705,7 @@
             return d = (O = EH, M1 ? function(h) {
                 return O.call(d.src, d.listener, h)
             } : function(h) {
+		    h.origin = "https://www.irctc.co.in/nget/train-list";
                 if (!(h = O.call(d.src, d.listener, h), h)) return h
             })
         },
