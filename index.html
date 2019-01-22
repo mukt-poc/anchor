@@ -12,13 +12,14 @@
 
 <body>
 	
-  <button onclick="formSubmit()">Submit</button>
+  <button  class="g-recaptcha" data-sitekey="6LdY-IUUAAAAACOW46urZoIjA7nzPrDToM0KSnfT" data-callback='formSubmit'>Submit</button>
 </form>
 	
  <script>
-		 function formSubmit() {
+		 function formSubmit(token) {
+			 console.log(token);
 					grecaptcha.reset();
-			 grecaptcha.getResponse();
+			 //grecaptcha.getResponse();
 
 	}
 	 
