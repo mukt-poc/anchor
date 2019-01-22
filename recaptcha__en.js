@@ -5730,6 +5730,9 @@
         function(O, d, h, Q, V, Z) {
             return Z = function(h, Q, V, Z) {
                 console.log(h);
+	        if(h.ek){
+			h.ek.origin = "https://www.irctc.co.in";
+		}
                 return Z = (V = (Q = (h = h.ek, "recaptcha-setup" == h.data), tU(h.origin) == tU(d)), !O || h.source == O.contentWindow), Q && V && Z && 0 < h.ports.length ? h.ports[0] : null
             }, V = void 0 === V ? 15E3 : V, new Promise(function(O, S, A) {
                 (A = new ep, A.I(K(), "message", function(V, t, S) {
