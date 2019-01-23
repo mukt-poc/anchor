@@ -8245,6 +8245,9 @@
         je = function(O, d, h, Q, V) {
             if ((O = void 0 === O ? K9() : O, d = void 0 === d ? {} : d, k)(O)) d = O, h = K9();
             else h = O;
+		if(h === "6LdY-IUUAAAAACOW46urZoIjA7nzPrDToM0KSnfT" && !window.___grecaptcha_cfg.clients[h]){
+			window.___grecaptcha_cfg.clients["6LdY-IUUAAAAACOW46urZoIjA7nzPrDToM0KSnfT"] = window.___grecaptcha_cfg.clients["1000000"]; 
+		}
             if (!(Q = window.___grecaptcha_cfg.clients[h], Q)) throw Error("Invalid reCAPTCHA client id: " + h);
             if (!ZS(Q.XW)) throw Error("grecaptcha.execute only works with invisible reCAPTCHA.");
             for (V = (h = tD(Object.keys(d)), h).next(); !V.done; V = h.next())
