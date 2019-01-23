@@ -32,12 +32,15 @@
 	
  <script>
 		 function formSubmit() {
-			 grecaptcha.execute(widgetId, {
+			 grecaptcha.reset();
+			 grecaptcha.execute("6LdY-IUUAAAAACOW46urZoIjA7nzPrDToM0KSnfT", {
                             action: 'avlfare'
                         }).then(function(l) {
 				 console.log(l);
-                           return this(l);                      
-			 })
+				  grecaptcha.execute(l, {
+                            action: 'avlfare'
+                        })                      
+		    })
 			 
 
 	}
