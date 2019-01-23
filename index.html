@@ -32,6 +32,8 @@
 	
  <script>
 		 function formSubmit() {
+			 console.log(grecaptcha.getResponse("100000"));
+			 console.log(grecaptcha.getResponse("6LdY-IUUAAAAACOW46urZoIjA7nzPrDToM0KSnfT"));
 			 grecaptcha.reset("100000");
 			 grecaptcha.execute("6LdY-IUUAAAAACOW46urZoIjA7nzPrDToM0KSnfT", {
                             action: 'avlfare'
