@@ -2,56 +2,55 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<script type="text/javascript">
-      var widgetId;
-        var onSubmit = function(token) {
-          console.log('success!');
+	
+	
+ <script>
+     var widgetId;
+     	 var onSubmit = function (l) {
+            widgetId=  grecaptcha.execute(l, {
+                            action: 'avlfare'
+                        }).then(function(l) {
+                 l.resolve();
+                             
+		    })
+         };
+     var e = this;
+      var onSubmitData = function () {
+             grecaptcha.execute('6LdY-IUUAAAAACOW46urZoIjA7nzPrDToM0KSnfT', {
+                            action: 'avlfare'
+                        }, function(e) {
+                        
+                            return e;
+                        
+                    }).then(function(l) {
+                                (function() {
+                                return e(l)
+                            })
+                            
+                             
+		    });
+         };
+			   var onloadCallback = function() {
+                  grecaptcha.execute('6LdY-IUUAAAAACOW46urZoIjA7nzPrDToM0KSnfT', {
+                            action: 'avlfare'
+                        }).then(function(l) {
+                 onSubmit(l);
+                             
+		    })
         };
+	
 
-        var onloadCallback = function() {
-          widgetId = grecaptcha.render('avlfare', {
-            'sitekey' : '6LdY-IUUAAAAACOW46urZoIjA7nzPrDToM0KSnfT',
-            'callback' : onSubmit
-          });
-        };
-		
 	
-    </script>
-    
-    <!--<script src="recaptcha__en.js"></script>-->
-    
-	
-    
+	 
+  </script> 
+    <script src="api.js?onload=onloadCallback&render=6LdY-IUUAAAAACOW46urZoIjA7nzPrDToM0KSnfT" async defer></script>	
     
 </head>
 
 <body>
-  <script src="api.js?onload=onloadCallback&render=6LdY-IUUAAAAACOW46urZoIjA7nzPrDToM0KSnfT" async defer></script>	
-  <button  class="g-recaptcha" data-sitekey="6LdY-IUUAAAAACOW46urZoIjA7nzPrDToM0KSnfT" onclick='formSubmit()'>Submit</button>
-</form>
-	
- <script>
-		 function formSubmit() {
-			 console.log(grecaptcha.getResponse("100000"));
-			 console.log(grecaptcha.getResponse("6LdY-IUUAAAAACOW46urZoIjA7nzPrDToM0KSnfT"));
-			 grecaptcha.reset("100000");
-			 grecaptcha.execute("6LdY-IUUAAAAACOW46urZoIjA7nzPrDToM0KSnfT", {
-                            action: 'avlfare'
-                        }).then(function(l) {
-				 console.log(l);
-				  grecaptcha.execute(l, {
-                            action: 'avlfare'
-                        })                      
-		    })
-			 
-
-	}
-	 
-  </script>
-
-      
+  
+  
+    <button onclick="onSubmitData()">TEST</button>
+    
    </body>
 </html>
-</html>
-
-
