@@ -12,7 +12,7 @@
         (window[CFG]['fns'] = window[CFG]['fns'] || []).push(f);
     };
     (window[CFG]['render'] = window[CFG]['render'] || []).push('6LdY-IUUAAAAACOW46urZoIjA7nzPrDToM0KSnfT');
-      (window[CFG]['onload'] = window[CFG]['onload'] || []).push('onloadCallback');
+      (window[CFG]['onload'] = []).push('onloadCallback');
     window['__google_recaptcha_client'] = true;
     var po = document.createElement('script');
     po.type = 'text/javascript';
